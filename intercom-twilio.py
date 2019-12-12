@@ -4,10 +4,10 @@ from intercom.client import Client as int_Client
 import json
 import re
 
-TWILLIO_ACCOUNT_SID = 'Twilio Account SID'
-TWILIO_AUTH_TOKEN = 'Twilio Authentication Token'
+TWILLIO_ACCOUNT_SID = 'Your_Twilio_SID'
+TWILIO_AUTH_TOKEN = 'Your_Auth_Token'
 INTERCOM_AUTH_TOKEN = 'Intercom Authentication Token'
-TWILIO_PHONE_NUMBER = 'Phone Number'
+TWILIO_PHONE_NUMBER = 'Your_Twilio_Number'
 
 # API Clients
 twilio = twil_Client(TWILLIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
@@ -77,4 +77,4 @@ def intercom_webhook():
         return '', 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
